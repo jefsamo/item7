@@ -1,0 +1,114 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title item7 | Cart
+    link(rel="stylesheet" href="/css/cartStyle.css")
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css")
+    link(rel="shortcut icon" type="image/png" href="images/item7 chef.png")
+  body
+    header
+      .header__section
+        .header__logo
+          a(href="/shop")
+            img(src="images/item7.png" alt="item7 logo")
+        .search
+          input.search(type="search" name="search" id="" placeholder="Search items..")
+        .header__nav
+          if user
+            .initials
+              - const initials = user.firstName.charAt(0).toUpperCase() + user.lastName.charAt(0).toUpperCase(); 
+                a(href="/profile")= initials 
+                a(href="/profile" style="color: #fff; margin-left: 32px;")= `${user.lastName}`
+          else
+            .login
+              a(href="/login") Login
+        .cart
+          a(href="/cart")
+            i.fa.fa-cart-arrow-down(aria-hidden="true" style="font-size: 2rem;")
+    .container
+      .container__content
+        .container__content-1
+          each item in cart.items
+            .container__content-1-inner
+              button
+                i.fa.fa-window-close.fa-2x
+              .container__content-1-inner-div
+                .container__content-1-inner-img
+                  img(src=`images/${item.image}` alt=`${item.name}` style="width: 100px;")
+                .container__content-1-inner-name
+                  h3= `${item.name}`
+                .container__adjust
+                  button.minus
+                    i.fa.fa-minus
+                  .number0fquantity(style="margin: 0 10px;")
+                    | 1
+                  button.minus
+                    i.fa.fa-plus
+                .container__content-1-inner-price
+                  - const sign = `₦`
+                  h2= `${sign}${item.price}`
+          
+        .container__content-2
+          .container-content-large
+            .total__container
+              .left.total-items Total items
+              .right.items= cart.itemsCount
+            .total__container
+              .left.sub-total Subtotal
+              -const sign =`₦`
+              .right.items= `${sign}${cart.total}`
+            .total__container
+              .left.delivery-charges Delivery Charges
+              .right.items= `${sign}${cart.deliveryCharges}`
+            .total__container
+              .left.total Total
+              .right.items(style="color: #06b257; font-size: 1.5rem;")= `${sign}${cart.total + cart.deliveryCharges}`
+            .total__container
+              hr(style="width: 100%; color: #f1f1f1;")
+            .total__container
+              input(type="submit" value="Checkout")
+    footer
+      .footer
+        .footer-section
+          h3 For Company
+          ul
+            li
+              a(href="#") About Us
+            li
+              a(href="#") Privacy
+            li
+              a(href="#") Terms &amp; Conditions
+        .footer-section
+          h3 For Customer
+          ul
+            li
+              a(href="#") Login
+            li
+              a(href="#") Sign up
+        .footer-section
+          h3 For Consumers
+          ul
+            li
+              a(href="#") Login
+            li
+              a(href="#") Sign up
+      hr(style="width: 80%; text-align: center; margin-left: 100px;")
+      .footer-bottom
+        div
+          p(style="margin-left: 150px; margin-top: 30px;")
+            | Copyright &copy;
+            script.
+              document.write(new Date().getFullYear());
+            |             All rights reserved |
+        div
+          img(src="images/item7.png" style="width: 100px; margin-top: -10px;" alt="")
+        .butter
+          p
+            | Made by 
+            i.fa.fa-heart-o
+            | Butterfly Inc
+      // <br><br>

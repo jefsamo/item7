@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" type="text/css" href="/css/loginStyle.css")
+    link(href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    script(src="https://kit.fontawesome.com/a81368914c.js")
+    title item7 | #{title}
+    link(rel="shortcut icon" type="image/png" href="images/item7 chef.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    // <img class="logo" style="height: 100vh;" src="images/ITEM 7 JPG.jpg" />
+    .container
+      .img
+        img(src="/images/undraw_shopping_app_flsj.png")
+      .login-content
+        form.form--login
+          img(style="width: 150px; height: auto;" src="/images/ITEM 7 FACE.png")
+          h2.title Welcome
+          .input-div.one
+            .i
+              i.fas.fa-user
+            .div
+              h5 Email
+              input#email.email.input(type="email")
+          .input-div.pass
+            .i
+              i.fas.fa-lock
+            .div
+              h5 Password
+              input#myInput.password.input(type="password")
+          a(href="#") Forgot Password?
+          input(type="checkbox" onclick="myFunction()")
+          | Show Password
+          input.btn(type="submit" value="Login")
+    //- script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js")
+    script(type="text/javascript" src="/js/main.js")
+    script(src='/js/bundle.js')

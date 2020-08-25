@@ -1,0 +1,126 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title item7 | #{title}
+    link(rel="stylesheet" href="/css/style.css")
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css")
+    link(rel="shortcut icon" type="image/png" href="/img/product/item7 chef.png")
+    script(src="https://code.jquery.com/jquery-3.5.1.js")
+  body
+    header.header
+      .header__section
+        .header__logo
+          a(href="#")
+            img(src="/images/item7.png" alt="item7 logo")
+        .header__nav
+          nav.nav-items
+            ul
+              li
+                a(href="#") Home
+              li
+                a(href="#") Contact
+              li
+                a(href="/login") Login
+              li
+                a(href="/signup") Signup
+      .discover
+        h3 Why settle for mediocre meals?
+        a.btn.btn-white(href="/shop") Shop Now
+    section.first-section(data-aos="fade-left")
+      p How it Works
+      .row
+        .col-1-of-4
+          i.fa.fa-desktop(aria-hidden="true" style="font-size: 3rem;")
+          h4 Discover
+          p Locate our nearest check-point
+        .col-1-of-4
+          i.fa.fa-cart-arrow-down(aria-hidden="true" style="font-size: 3rem;")
+          h4 Add to cart menu
+          p Locate our nearest check-point
+        .col-1-of-4
+          i.fa.fa-line-chart(aria-hidden="true" style="font-size: 3rem;")
+          h4 Place your Order
+          p Locate our nearest check-point
+        .col-1-of-4
+          i.fa.fa-motorcycle(aria-hidden="true" style="font-size: 3rem;")
+          h4 Get Delivered
+          p Food is delivered at your doorstep
+    section.second-section
+      .div
+        p Consumer App
+        p
+          | Download the
+          b
+            span.span.span__red item
+            span.span.span__yellow 7
+          |           on your mobile phone
+        p Order your favorite meal from the comfort of your home
+        img(src="/images/google_play.34e99894.png" alt="Play store Logo")
+      .div-2
+        a.google__play(href="#")
+          img(src="/images/item 7 app.jpg" alt="Mobile app")
+    section.third-section(data-aos="fade-right")
+      h3 Join our DISPATCH TEAM
+      p
+        | We are constantly looking to recruit smart, honest and diligent
+        | personnel to our delivery team.
+      a.btn-join(href="#") Join Us
+    section.fourth-section
+      .div
+        h3
+          | Worried about your meal? 
+          br
+          |           Track your order with ease
+      .div-2
+        img(src="/images/mobile-3.gif" alt="")
+    footer
+      .footer
+        .footer-section
+          h3 For Company
+          ul
+            li
+              a(href="#") About Us
+            li
+              a(href="#") Privacy
+            li
+              a(href="#") Terms &amp; Conditions
+        .footer-section
+          h3 For Customer
+          ul
+            li
+              a(href="#") Login
+            li
+              a(href="#") Sign up
+        .footer-section
+          h3 For Consumers
+          ul
+            li
+              a(href="#") Login
+            li
+              a(href="#") Sign up
+      hr(style="width: 80%; text-align: center; margin-left: 100px;")
+      .footer-bottom
+        div
+          p(style="margin-left: 150px; margin-top: 30px;")
+            | Copyright &copy;
+            script.
+              document.write(new Date().getFullYear());
+            |             All rights reserved |
+        div
+          img(src="/images/item7.png" style="width: 100px; margin-top: -10px;" alt="")
+        .butter
+          p
+            | Made by 
+            i.fa.fa-heart-o
+            | Butterfly Inc
+      // <br><br>
+    script(src="https://unpkg.com/aos@next/dist/aos.js")
+    script.
+      AOS.init({
+      offset: 120,
+      duration: 1000,
+      });

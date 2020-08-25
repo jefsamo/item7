@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title item7 | #{title}
+    link(rel="stylesheet" href="/css/signupStyle.css")
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css")
+    link(rel="shortcut icon" type="image/png" href="images/item7 chef.png")
+  body
+    .container
+      .div-1
+        a(href="#")
+          img(src="/images/item7.png" alt="Item7 logo" style="width: 230px;")
+        h3 Become one of our happy customers
+      .div-2
+        form.form--signup
+          // <i class="fa fa-arrow-left fa-2x"></i>
+          p &larr; Personal Information
+          input#firstName.input(type="text" name="firstName" placeholder="FirstName")
+          br
+          input#lastName.input(type="text" name="lastName" placeholder="LastName")
+          br
+          input#email.input(type="email" name="email" placeholder="Email")
+          br
+          input#phoneNumber.input(type="text" name="phoneNumber" placeholder="Phone Number")
+          br
+          input#password.input(type="password" name="password" placeholder="Password")
+          br
+          input#passwordConfirm(type="password" name="passwordConfirm" placeholder="Confirm Password")
+          input(type="submit" value="Sign up")
+      script(src='/js/bundle.js')
